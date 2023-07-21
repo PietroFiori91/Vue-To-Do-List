@@ -1,6 +1,19 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+h1 {
+  font-size: 7rem;
+  font-weight: bolder;
+  letter-spacing: 0.5rem;
+  margin-top: -200px;
+  color: #252a40;
+  /* text-shadow: 5px 5px 5px #000000; */
+}
+
 header {
-  background-image: url();
+  background-image: url(../JPG/09.jpg);
   background-position: center;
   background-size: cover;
-  height: 600px;
+  height: 400px;
 }
