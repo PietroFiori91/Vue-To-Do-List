@@ -46,7 +46,9 @@
 
                 <ul class="list-group">
 
-                    <li class="list-group-item p-3" v-for="justDoItItem in justDoItList">
+                    <li class="list-group-item p-3 d-flex align-items-center" v-for="justDoItItem in justDoItList">
+                        <div class="justDoItItem-color"
+                            :style="{backgroundColor: justDoItItem.color, marginRight:'15px'}"></div>
                         {{justDoItItem.text}}
                     </li>
 
