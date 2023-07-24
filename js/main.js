@@ -7,7 +7,11 @@ const { createApp } = Vue;
 const app = createApp({
   data() {
     return {
-      justDoIt: [
+      newJustDoItItem: {
+        text: "",
+        color: "#262B41",
+      },
+      justDoItList: [
         {
           text: "Daily Quest",
           color: "#ffff",
@@ -15,5 +19,12 @@ const app = createApp({
       ],
     };
   },
-  methods: {},
+  //aggiungo al click btn push della quest in array
+  methods: {
+    addJustDoItItem() {
+      //clono per togliere reattività oggetto
+      const itemClone = { ...this.newJustDoItItem };
+      this.justDoItList.push(itemClone);
+    },
+  },
 }).mount("#app");

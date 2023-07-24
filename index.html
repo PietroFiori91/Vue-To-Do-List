@@ -34,9 +34,11 @@
 
             <h1 class="">JUST DO IT ...</h1>
 
-            <div>
+            <div class="input-group">
 
-                <input type="text" class="form-control" placeholder="Che si fa ?">
+                <input type="text" class="form-control" placeholder="Che si fa ?" v-model="newJustDoItItem.text">
+                <input type="color" class="form-control second-input" v-model="newJustDoItItem.color">
+                <button class="btn btn-primary" @click="addJustDoItItem"><i class="fas fa-plus"></i></button>
 
             </div>
 
@@ -44,7 +46,7 @@
 
                 <ul class="list-group">
 
-                    <li class="list-group-item p-3" v-for="justDoItItem in justDoIt">
+                    <li class="list-group-item p-3" v-for="justDoItItem in justDoItList">
                         {{justDoItItem.text}}
                     </li>
 

@@ -17,3 +17,8 @@ header {
   background-size: cover;
   height: 400px;
 }
+
+.second-input {
+  max-width: 5%;
+  height: 38px; /*perchè????*/
+}
