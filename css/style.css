@@ -19,11 +19,24 @@ header {
 }
 
 .second-input {
-  max-width: 5%;
+  max-width: 4%;
   height: 38px; /*perchè????*/
 }
 
 .justDoItItem-color {
-  width: 15px;
-  height: 50px;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.justdoit-item {
+}
+
+.justdoit-item .justdoit-item-btn {
+  opacity: 0;
+}
+
+.justdoit-item:hover .justdoit-item-btn {
+  opacity: 1;
 }

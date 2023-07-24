@@ -8,6 +8,7 @@ const app = createApp({
   data() {
     return {
       newJustDoItItem: {
+        id: "#",
         text: "",
         color: "#262B41",
       },
@@ -26,5 +27,7 @@ const app = createApp({
       const itemClone = { ...this.newJustDoItItem };
       this.justDoItList.push(itemClone);
     },
+    //deleto ID dell' item
+    deleteJustDoItItem(itemId) {},
   },
 }).mount("#app");

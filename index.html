@@ -36,7 +36,8 @@
 
             <div class="input-group">
 
-                <input type="text" class="form-control" placeholder="Che si fa ?" v-model="newJustDoItItem.text">
+                <input type="text" class="form-control" placeholder="Che si fa ?" v-model="newJustDoItItem.text"
+                    @keyup.enter="addJustDoItItem">
                 <input type="color" class="form-control second-input" v-model="newJustDoItItem.color">
                 <button class="btn btn-primary" @click="addJustDoItItem"><i class="fas fa-plus"></i></button>
 
@@ -46,10 +47,18 @@
 
                 <ul class="list-group">
 
-                    <li class="list-group-item p-3 d-flex align-items-center" v-for="justDoItItem in justDoItList">
+                    <li class="list-group-item p-3 d-flex align-items-center justdoit-item"
+                        v-for="justDoItItem in justDoItList">
+
                         <div class="justDoItItem-color"
                             :style="{backgroundColor: justDoItItem.color, marginRight:'15px'}"></div>
-                        {{justDoItItem.text}}
+
+                        <div class="flex-grow-1">
+                            {{justDoItItem.id}} - {{justDoItItem.text}}</div>
+
+                        <button class="btn btn-link justdoit-item-btn" @click="deleteJustDoItItem(justDoItIyem.id)"><i
+                                class="fa-solid fa-xmark"></i></button>
+
                     </li>
 
                 </ul>
